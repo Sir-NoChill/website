@@ -1,0 +1,35 @@
+<svg width="120" height="120" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Upright A triangle shape -->
+  <!-- This creates the main upright "A" by drawing from top point (50,10) down to bottom left (20,90), 
+       then creating the left leg inward to (30,90), up to crossbar level (35,75), 
+       across to the right side of crossbar (65,75), down to right leg (70,90), 
+       out to bottom right corner (80,90), then back up to the top point to close the shape -->
+  <path d="M50 10 L20 90 L30 90 L35 75 L65 75 L70 90 L80 90 Z" 
+        fill="#6495ED" 
+        stroke="#4169E1" 
+        stroke-width="1"
+        opacity="0.9" 
+        filter="url(#glow)"/>
+  
+  <!-- Upside down A triangle shape -->
+  <!-- This creates the inverted "A" by drawing from bottom point (50,90) up to top left (20,10),
+       then creating the left leg inward to (30,10), down to crossbar level (35,25),
+       across to the right side of crossbar (65,25), up to right leg (70,10),
+       out to top right corner (80,10), then back down to the bottom point to close the shape -->
+  <path d="M50 90 L20 10 L30 10 L35 25 L65 25 L70 10 L80 10 Z" 
+        fill="#6495ED" 
+        stroke="#4169E1" 
+        stroke-width="1"
+        opacity="0.9" 
+        filter="url(#glow)"/>
+</svg>
