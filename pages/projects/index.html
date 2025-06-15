@@ -1,0 +1,141 @@
+---
+layout: default
+title: About
+---
+<div class="container">
+    <div class="content-card">
+        <h1>My Projects</h1>
+        <p>A collection of software projects I've been working on, ranging from web applications to automation tools. Each project represents a unique challenge and learning opportunity.</p>
+	<div class="container">
+	  <h2>Github Chart</h2>
+	  <img src="https://ghchart.rshah.org/Sir-NoChill" alt="Ayrton's Github chart" />
+	</div>
+    </div>
+
+    <div class="projects-grid">
+        <a href="mailto:code@blobfish.icu" class="project-card email-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-image">
+                <img src="{{ '/assets/images/gazprea.png' | relative_url }}" />
+                <div class="project-overlay">
+                    <div class="project-status completed">Completed</div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Gazprea Language</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">ANTLR</span>
+                    <span class="tech-tag">LLVM</span>
+                    <span class="tech-tag">MLIR</span>
+                </div>
+                <p>A Julia-like langauge completed for our compiler development course at the University of Alberta. This compiler became the reference compiler for the course, for which I am now a TA.</p>
+                <div class="project-links">
+                    <span class="project-link-item">
+			{% include email.svg %}
+                        Source code available upon request
+                    </span>
+                </div>
+            </div>
+            <div class="project-arrow">→</div>
+        </a>
+
+        <a href="https://github.com/gem5/gem5" class="project-card" target="_blank" rel="noopener noreferrer">
+            <div class="project-image">
+                <img src="{{ '/assets/images/gem5.png' | relative_url }}" height=300 />
+                <div class="project-overlay">
+                    <div class="project-status completed">Contributor</div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Gem5 Computer Architecture Simulator</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">C++</span>
+                    <span class="tech-tag">Computer Architecture</span>
+                </div>
+                <p>The gem5 simulator. I contribute to the stdlib of the project mostly with respect to usability improvements. I currently TA the course at the University of Alberta teaching computer architecture with gem5.</p>
+                <div class="project-links">
+                    <span class="project-link-item">
+			{% include github.svg %}
+                        View Source
+                    </span>
+                </div>
+            </div>
+            <div class="project-arrow">→</div>
+        </a>
+
+        <a href="https://git.blobfish.icu/BORGERMAN/borgerman-make-borger" class="project-card forgejo-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-image">
+                <img src="{{ '/assets/images/borger.jpg' | relative_url }}" height=300 />
+                <div class="project-overlay">
+                    <div class="project-status active">Active Development</div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Borgerman</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Godot</span>
+                    <span class="tech-tag">Rust</span>
+                    <span class="tech-tag">Blender</span>
+                </div>
+                <p>A video game written in Godot featuring you, someone named Jeremy Rienhart and an incomprehensible horror that wants to wake up...</p>
+                <div class="project-links">
+                    <span class="project-link-item">
+			{% include forgejo.svg %}
+                        View on Forgejo
+                    </span>
+                </div>
+            </div>
+            <div class="project-arrow">→</div>
+        </a>
+
+        <a href="https://git.blobfish.icu/Open4X/open4x-vi" class="project-card forgejo-link" target="_blank" rel="noopener noreferrer">
+            <div class="project-image">
+                <img src="{{ '/assets/images/open4x.png' | relative_url }}" height=300 />
+                <div class="project-overlay">
+                    <div class="project-status active">Active Development</div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Open 4X - VI</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">Rust</span>
+                </div>
+                <p>An open source implementation of a popular 4X game, with the hope of using it in RL research to pose some more challenging and human-like problems</p>
+                <div class="project-links">
+                    <span class="project-link-item">
+			{% include forgejo.svg %}
+                        View Source
+                    </span>
+                </div>
+            </div>
+            <div class="project-arrow">→</div>
+        </a>
+ 
+        <a href="https://github.com/Sir-NoChill/cymbol-lang" class="project-card" target="_blank" rel="noopener noreferrer">
+            <div class="project-image">
+                <img src="{{ '/assets/images/cymbol.png' | relative_url }}" height=300 />
+                <div class="project-overlay">
+                    <div class="project-status planning">Planning</div>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Cymbol Lang</h3>
+                <div class="project-tech">
+                    <span class="tech-tag">C++</span>
+		    <span class="tech-tag">ANTLR</span>
+		    <span class="tech-tag">LLVM</span>
+		    <span class="tech-tag">MLIR</span>
+                </div>
+                <p>An open source implementation of a Terrence Parr's Cymbol language written using MLIR.</p>
+                <div class="project-links">
+                    <span class="project-link-item">
+			{% include github.svg %}
+                        View Source
+                    </span>
+                </div>
+            </div>
+            <div class="project-arrow">→</div>
+        </a>
+   </div>
+</div>

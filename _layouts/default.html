@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- Theme detection script - must run before CSS loads -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            // Add a class to indicate theme is ready
+            document.documentElement.classList.add('theme-ready');
+        })();
+    </script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/assets/logo.svg' | relative_url }}" type="image/svg+xml">
+    <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="logo">
+                        <img src="{{ '/assets/logo.svg' | relative_url }}" height="40"/>
+                        <a href="{{ '/' | relative_url }}">Ayrton Chilibeck</a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+                        <li><a href="{{ 'pages/about/index.html' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a></li>
+                        <li><a href="{{ 'pages/projects/index.html' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %}>Projects</a></li>
+                        <li><a href="{{ 'pages/media/index.html' | relative_url }}" {% if page.url == '/media/' %}class="active"{% endif %}>Media</a></li>
+                    </ul>
+                </div>
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <!-- Add your footer here if you have one -->
+    
+    <script>
+        // Dark mode toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+</body>
+</html>

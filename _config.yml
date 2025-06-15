@@ -1,0 +1,31 @@
+title: Ayrton Chilibeck
+description: A personal website
+url: "https://www.blobfish.icu"  # Your custom domain
+baseurl: ""  # Leave empty if site is at root
+
+# Site metadata
+author: Ayrton Chilibeck
+email: contact@blobfish.icu
+keywords: "compilers, computer architecture, programming"
+
+# Social/SEO metadata
+linkedin:
+  url: https://linkedin.com/in/ayrton-chilibeck
+
+# Jekyll plugins (GitHub Pages supports these)
+# plugins:
+#   - jekyll-sitemap
+#   - jekyll-feed
+#   - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - flake.nix
+  - flake.lock

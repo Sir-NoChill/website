@@ -1,0 +1,4 @@
+.envrc
+.direnv/
+_site/
+.jekyll-cache/
